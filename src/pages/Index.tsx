@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Brain, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const Index = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleScheduleClick = () => {
     window.open("https://cal.com/agentcia/30min", "_blank");
   };
@@ -34,37 +32,7 @@ const Index = () => {
               />
             </motion.div>
             
-            {/* Mobile menu button */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="sm:hidden p-2 text-gray-500 hover:text-gray-600"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-
-            {/* Desktop menu */}
-            <div className="hidden sm:flex items-center gap-8 text-sm">
-              <motion.span whileHover={{ scale: 1.05 }} className="text-gray-500 cursor-pointer">
-                🇪🇸 Madrid
-              </motion.span>
-              <motion.span whileHover={{ scale: 1.05 }} className="text-gray-500 cursor-pointer">
-                🇲🇽 Ciudad de México
-              </motion.span>
-              <motion.span whileHover={{ scale: 1.05 }} className="text-gray-500 cursor-pointer">
-                🇨🇷 Costa Rica
-              </motion.span>
-            </div>
-          </div>
-
-          {/* Mobile menu */}
-          <div className={`${isMenuOpen ? 'block' : 'hidden'} sm:hidden mt-4 pb-4`}>
-            <div className="flex flex-col gap-4 items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-end sm:items-center gap-2 sm:gap-8 text-sm">
               <span className="text-gray-500">🇪🇸 Madrid</span>
               <span className="text-gray-500">🇲🇽 Ciudad de México</span>
               <span className="text-gray-500">🇨🇷 Costa Rica</span>
@@ -262,9 +230,9 @@ const Index = () => {
           </motion.div>
           <p className="text-gray-500 mb-6">IA con enfoque técnico y creativo</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-sm text-gray-400">
-            <motion.span whileHover={{ scale: 1.05 }}>🇪🇸 Madrid</motion.span>
-            <motion.span whileHover={{ scale: 1.05 }}>🇲🇽 Ciudad de México</motion.span>
-            <motion.span whileHover={{ scale: 1.05 }}>🇨🇷 Costa Rica</motion.span>
+            <span>🇪🇸 Madrid</span>
+            <span>🇲🇽 Ciudad de México</span>
+            <span>🇨🇷 Costa Rica</span>
           </div>
         </div>
       </footer>
