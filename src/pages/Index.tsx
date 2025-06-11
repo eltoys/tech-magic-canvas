@@ -27,7 +27,7 @@ const Index = () => {
               }}
             >
               <img 
-                src="/ChatGPT Image Jun 11, 2025 at 01_42_41 PM.png" 
+                src="/agencia-logo.png" 
                 alt="Agencia" 
                 className="h-full w-auto object-contain"
               />
@@ -240,7 +240,7 @@ const Index = () => {
             }}
           >
             <img 
-              src="/ChatGPT Image Jun 11, 2025 at 01_42_41 PM.png" 
+              src="/agencia-logo.png" 
               alt="Agencia" 
               className="h-20 w-auto object-contain"
             />
