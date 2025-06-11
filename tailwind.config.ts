@@ -53,22 +53,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Modern AI-themed colors
-				'ai-purple': '#7C3AED',
-				'ai-blue': '#3B82F6',
-				'ai-cyan': '#06B6D4',
-				'ai-pink': '#EC4899',
-				'ai-orange': '#F97316',
+				// Minimal color palette
+				'minimal-black': '#000000',
+				'minimal-white': '#FFFFFF',
+				'minimal-yellow': '#FFE135',
+				'minimal-gray': '#F5F5F5',
+				'minimal-dark-gray': '#1A1A1A',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -92,41 +82,35 @@ export default {
 						height: '0'
 					}
 				},
-				'gradient-shift': {
-					'0%, 100%': {
-						'background-position': '0% 50%'
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
 					},
-					'50%': {
-						'background-position': '100% 50%'
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
 					}
 				},
-				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0px)'
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(50px)'
 					},
-					'50%': {
-						transform: 'translateY(-10px)'
-					}
-				},
-				'pulse-glow': {
-					'0%, 100%': {
-						opacity: '1'
-					},
-					'50%': {
-						opacity: '0.5'
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.8s ease-out',
 			},
-			backgroundImage: {
-				'gradient-ai': 'linear-gradient(135deg, #7C3AED 0%, #3B82F6 25%, #06B6D4 50%, #EC4899 75%, #F97316 100%)',
-				'gradient-ai-alt': 'linear-gradient(45deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
 			}
 		}
 	},
