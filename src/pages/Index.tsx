@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Brain, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { ScrollToTop } from "@/components/scroll-to-top";
 import { useState } from "react";
 
 const Index = () => {
@@ -269,8 +268,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-
-      <ScrollToTop />
     </div>
   );
 };
